@@ -1,0 +1,6 @@
+{
+  "name": "Aether 3D — Cinematic Sci-Fi Photography Gallery",
+  "description": "An immersive photography experience featuring a 3D perspective image slider, neon-lime glowing illumination, dark techno aesthetic, and atmospheric motion.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
