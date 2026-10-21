@@ -11,7 +11,8 @@ export const BackgroundVideo: React.FC = () => {
       {/* Looping Full-Page Background Video */}
       {!videoFailed ? (
         <video
-          className="absolute inset-0 w-full h-full object-cover opacity-75 contrast-105 brightness-95 transition-opacity duration-1000"
+          className="absolute inset-0 w-full h-full object-cover opacity-100 contrast-105 brightness-100 transition-opacity duration-1000"
+          style={{ objectPosition: 'center center' }}
           autoPlay
           muted
           loop
@@ -20,7 +21,7 @@ export const BackgroundVideo: React.FC = () => {
           aria-hidden="true"
           onError={() => setVideoFailed(true)}
         >
-          <source src="/assets/aistudio/14583123_1280_720_flipped_8f1c3a94.mp4" type="video/mp4" />
+          <source src="/assets/aistudio/14583123_1280_720_cropped_e19d34da.mp4" type="video/mp4" />
           <source src="/videos/14583123_1280_720.mp4" type="video/mp4" />
         </video>
       ) : (
@@ -28,13 +29,13 @@ export const BackgroundVideo: React.FC = () => {
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-slate-900/40 via-[#05070c] to-[#020306] opacity-90" />
       )}
 
-      {/* Dark Translucent Scrim & Atmospheric Vignette */}
-      <div className="absolute inset-0 bg-gradient-to-t from-[#05070c] via-[#05070c]/50 to-[#05070c]/70 backdrop-blur-[1px]" />
-      <div className="absolute inset-0 cinematic-vignette" />
+      {/* Dark Translucent Scrim & Atmospheric Vignette (Softened for increased video clarity) */}
+      <div className="absolute inset-0 bg-gradient-to-t from-[#05070c]/80 via-[#05070c]/25 to-[#05070c]/45 backdrop-blur-[0.5px]" />
+      <div className="absolute inset-0 cinematic-vignette opacity-70" />
 
       {/* Subtle Cyan-Navy Atmospheric Ambient Bloom */}
       <div className="absolute top-1/4 -left-32 w-96 h-96 bg-cyan-950/20 rounded-full blur-[140px]" />
-      <div className="absolute bottom-1/4 right-0 w-[32rem] h-[32rem] bg-emerald-950/15 rounded-full blur-[160px]" />
+      <div className="absolute bottom-1/3 right-0 w-[32rem] h-[32rem] bg-emerald-950/15 rounded-full blur-[160px]" />
     </div>
   );
 };
